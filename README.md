@@ -47,6 +47,28 @@ it made the defence accept its value.
 - **Refusal:** Claude Opus 5.5 refused to play the attacker (stop reason `refusal`, category `cyber`), so
   GPT-5.5 attacked instead.
 
+## What is new, and what is not
+
+This was checked against the 2026 papers on the project page, in an arXiv search on 2026-11-18. The check was not
+exhaustive, so "new" means "we found no study that did this".
+
+New in this study:
+1. A measurement of **correlated failure** (φ) between witnesses across vendors and across views, under a
+   defence-aware adaptive attacker.
+2. **Vendor diversity beat view diversity.** This contradicts our own pre-registered prediction.
+3. **A team of small-model witnesses held 0/12**, while its members alone lost up to 12/12.
+4. **Translation as a defensive view** (Tamil). It made Haiku easier to fool, a negative result.
+5. **An adaptive threat model enforced by a pixel check:** the attacker may add content but may not change how the
+   page looks.
+6. **Cost:** an early-exit cascade reaches the same decisions at 5% of the cost of asking every witness.
+
+Taken from prior work:
+- near-target injections (NTBench, arXiv 2610.32531);
+- the screenshot view (Render Before Reading, arXiv 2609.36121);
+- same-model prompt voting (SecInfer, arXiv 2509.24967);
+- selective escalation (SIEVE, arXiv 2512.06716);
+- adaptive-attacker testing (arXiv 2510.09023).
+
 ## Limits
 
 - 12 scenarios with synthetic documents, so only large gaps are clear.

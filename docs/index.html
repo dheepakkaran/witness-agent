@@ -84,7 +84,7 @@ footer{padding:72px 0 56px;color:var(--faint);font-size:13px;text-align:center}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><b>Witness</b><a href="#film">Film</a><a href="#idea">Idea</a><a href="#results">Results</a><a href="#twist">Twist</a><a href="#method">Method</a><a href="#limits">Limits</a></div></nav>
+<nav><div class="wrap"><b>Witness</b><a href="#film">Film</a><a href="#idea">Idea</a><a href="#results">Results</a><a href="#twist">Twist</a><a href="#new">What is new</a><a href="#method">Method</a><a href="#limits">Limits</a></div></nav>
 <div class="wrap">
 <header>
   <div class="eyebrow">Agent security · pre-registered experiment · November 2026</div>
@@ -176,6 +176,30 @@ footer{padding:72px 0 56px;color:var(--faint);font-size:13px;text-align:center}
     <tr><td>Cost control</td><td>Batch APIs (−50%), prompt caching for the attacker, low effort, an early-exit cascade, hard caps per provider. Total: Claude $8.64, OpenAI $14.42</td></tr>
     <tr><td>Infra</td><td>Qwen on the Groq free tier, then on an own vLLM server (A100 80GB) when the free tier stalled; 79/84 same answers on a serving check</td></tr>
   </table>
+</section>
+
+<section id="new">
+  <h2>What is new, <em>and what is not</em></h2>
+  <p class="sub">Checked against the 2026 papers below, in an arXiv search on 2026-11-18. That check was not exhaustive, so read "new" as "we found no study that did this".</p>
+  <div class="split">
+    <div class="panel"><div class="eyebrow" style="color:var(--teal)">New in this study</div>
+      <ol style="margin:12px 0 0;padding-left:20px;color:var(--text)">
+        <li><b>Do witnesses fail together?</b> We measured correlated failure (φ) across vendors and across views, against an attacker who knows the defence. We found no prior measurement of this.</li>
+        <li><b>Vendor diversity beats view diversity.</b> Our own pre-registered prediction said the opposite (φ 0.14 vs 0.24 for small models).</li>
+        <li><b>A team of small models matched one strong model.</b> 0/12 attacker wins against the team, though its members alone lost up to 12/12.</li>
+        <li><b>Translation as a defensive view.</b> Reading a Tamil translation was tested as a witness. It made Haiku easier to fool, a negative result.</li>
+        <li><b>A fair adaptive threat model.</b> The attacker may add anything but may not change how the page looks, enforced by a pixel check (84 rounds rejected).</li>
+        <li><b>Security with a price tag.</b> An early-exit cascade gives the same decisions at 5% of the cost of asking every witness.</li>
+      </ol></div>
+    <div class="panel"><div class="eyebrow">Taken from prior work</div>
+      <ul style="margin:12px 0 0;padding-left:20px;color:var(--muted)">
+        <li>Near-target injections that change a value slightly: NTBench</li>
+        <li>Reading a rendered screenshot as a defence: Render Before Reading (Pictionary)</li>
+        <li>Voting over one model with different prompts: SecInfer</li>
+        <li>Escalating only unclear cases: SIEVE</li>
+        <li>Testing against adaptive attackers: The Attacker Moves Second</li>
+      </ul></div>
+  </div>
 </section>
 
 <section>
