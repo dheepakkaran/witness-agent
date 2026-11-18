@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+results/runs/
+data/raw/
+BUILD-LOG.md
+results/cache/
+results/renders/
+results/openai_batch_*.jsonl
+.pytest_cache/
+results/groq.lock
+film/_work/
+results/log_*.txt
